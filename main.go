@@ -2,8 +2,8 @@ package main
 
 import (
     "encoding/json"
-	"fmt"
-	"io"
+    "fmt"
+    "io"
     "os"
     "math/rand"
     "time"
@@ -65,8 +65,7 @@ func main() {
 		randomIndex := rand.Intn(len(eligibleFights))
 		selectedFight := eligibleFights[randomIndex]
 
-		promotion, event, fighter1, fighter2, date :=
-			selectedFight.Promotion, selectedFight.Event, selectedFight.Fighter_01, selectedFight.Fighter_02, selectedFight.Date
+		promotion, event, fighter1, fighter2, date := selectedFight.Promotion, selectedFight.Event, selectedFight.Fighter_01, selectedFight.Fighter_02, selectedFight.Date
 
 		color.Red("| %s %s | %s vs %s | Date: %s |\n", promotion, event, fighter1, fighter2, date)
 	} else {
